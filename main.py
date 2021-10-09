@@ -23,7 +23,6 @@ def config(filename='database.ini', section='postgresql'):
 
 def connect():
     """ Connect to the PostgreSQL database server """
-    conn = None
     try:
         # read connection parameters
         params = config()
@@ -110,4 +109,3 @@ if __name__ == "__main__":
     db_connection = connect()
     create_table(db_connection, table_name)
     insert_data(db_connection, table_name)
-
